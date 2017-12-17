@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Our Love Story</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+body
+			{
+				margin:0;
+				background:#000;
+			}
+		#wrap
+			{
+				margin: 0 auto;
+				width:300px;
+				height:400px;
+				position: relative;
+				-webkit-perspective:3000px;
+				-moz-perspective:3000px;
+				-ms-transform:perspective(3000px);
+				-ms-perspective:3000px;
+			}
+		#head
+			{
+				width:100%;
+				height:100%;
+				position: absolute;
+				-webkit-transform-style: preserve-3d;
+				-webkit-animation:donghua 15s linear 0s infinite;
+				-moz-transform-style: preserve-3d;
+				-moz-animation:donghua 15s linear 0s infinite;
+				-ms-transform-style: preserve-3d;
+				-ms-animation:donghua 25s linear 0s infinite;
+			}
+		#head div
+			{	
+				position: absolute;
+				top:50px;
+				left:0;
+				width:300px;
+				height:400px;
+				border:1px solid red;
+				text-align: center;
+				line-height:100px;
+			}
+		#head div:nth-child(1)
+			{
+				-webkit-transform:rotateY(0deg) translateZ(400px);
+				-moz-transform:rotateY(0deg) translateZ(400px);
+				-ms-transform:rotateY(0deg) translateZ(400px);
+				background:url(images/01.JPG);
+				background-size:cover;
+			}
+		#head div:nth-child(2)
+			{
+				-webkit-transform:rotateY(36deg) translateZ(500px);
+				-moz-transform:rotateY(36deg) translateZ(500px);
+				-ms-transform:rotateY(36deg) translateZ(500px);
+				background:url(images/02.JPG);
+				background-size:cover;
+			}
+			
+		#head div:nth-child(3)
+			{
+				-webkit-transform:rotateY(72deg) translateZ(400px);
+				-moz-transform:rotateY(72deg) translateZ(400px);
+				-ms-transform:rotateY(72deg) translateZ(400px);
+				background:url(images/03.JPG);
+				background-size:cover;
+			}
+			
+		#head div:nth-child(4)
+			{
+				-webkit-transform:rotateY(108deg) translateZ(500px);
+				-moz-transform:rotateY(108deg) translateZ(500px);
+				-ms-transform:rotateY(108deg) translateZ(500px);
+				background:url(images/04.JPG);
+				background-size:cover;
+			}
+		#head div:nth-child(5)
+			{
+				-webkit-transform:rotateY(144deg) translateZ(400px);
+				-moz-transform:rotateY(144deg) translateZ(400px);
+				-ms-transform:rotateY(144deg) translateZ(400px);
+				background:url(images/05.JPG);
+				background-size:cover;
+			}
+		#head div:nth-child(6)
+			{
+				-webkit-transform:rotateY(180deg) translateZ(500px);
+				-moz-transform:rotateY(180deg) translateZ(500px);
+				-ms-transform:rotateY(180deg) translateZ(500px);
+				background:url(images/06.JPG);
+				background-size:cover;
+			}
+		#head div:nth-child(7)
+			{
+				-webkit-transform:rotateY(216deg) translateZ(400px);
+				-moz-transform:rotateY(216deg) translateZ(400px);
+				-ms-transform:rotateY(216deg) translateZ(400px);
+				background:url(images/07.JPG);
+				background-size:cover;
+			}
+		@-webkit-keyframes donghua{
+			0%{transform:rotateX(5deg) rotateY(360deg)}
+			50%{transform:rotateX(-5deg) rotateY(180deg)}
+			100%{transform:rotateX(5deg) rotateY(0deg)}
+		}
+		@-moz-keyframes donghua{
+			0%{transform:rotateY(10deg) rotateY(0deg)}
+			50%{transform:rotateY(-10deg) rotateY(180deg)}
+			100%{transform:rotateY(10deg) rotateY(360deg)}
+		}
+		@-ms-keyframes donghua{
+			0%{transform:rotateY(10deg) rotateY(0deg)}
+			50%{transform:rotateY(-10deg) rotateY(180deg)}
+			100%{transform:rotateY(10deg) rotateY(360deg)}
+		}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+
+	<div id="content">
+		
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					亲爱的莉，这是我们相爱在一起的时光。
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					我喜欢你，认真且怂，从一而终。<br/>
+					<div class="signature">刘彬</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="wrap">
+			<div id="head">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+	</div>
+	
+	<span style="font-size:14px;"><span id="musicControl">  
+        <a id="mc_play" class="on" onclick="play_music();">  
+            <audio id="musicfx" loop="loop" autoplay="autoplay">  
+                <source src="爱的就是你.mp3" type="audio/mpeg">  
+            </audio>  
+        </a>  
+ </span></span>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2017, 9, 6);
+together.setHours(0);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 500);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	// adjustCodePosition();
+	// $("#code").typewriter();
+}
+</script>
+
+</body>
+</html>
